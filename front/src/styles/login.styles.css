@@ -1,0 +1,71 @@
+.html{
+    background-image: "./background.svg";
+}
+
+.login-form{
+    z-index: 5;
+    width:100%;
+    max-width: 300px;
+    padding: 15px;
+    margin: auto;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.font-weight-bold{
+    text-align: center;
+}
+
+.logininputemail{
+    width: 100%;
+}
+
+.logininputpassword{
+    width: 100%;
+}
+
+.form_jumbo{
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 5px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.404);
+    height: 380px;
+}
+
+.form_jumbinho{
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 5px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.404);
+    height: 280px;
+}
+
+.alertbox{
+    visibility: hidden;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.login-links{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.chave{
+    visibility: hidden;
+}
+.senha{
+    visibility:  hidden;
+}
+
+.back{
+    background-color: darkcyan;
+}
