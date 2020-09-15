@@ -1,12 +1,7 @@
-
-
-
 import { editUser } from "../services/user.services";
 
-
-
 export const editProfile = async() => {
-    const email = localStorage.getItem("email");
+    const email = localStorage.getItem("user");
     const name = document.getElementById("nameinput").value;
     const birthday = document.getElementById("dateinput").value;
     const cpf = document.getElementById("cpfinput").value;

@@ -20,7 +20,7 @@ export const Register= () => {
                             <Label>Password</Label><br/>
                             <Input id="passwordinput" type="password" placeholder="Password"/>
                         </FormGroup>
-                        <Button className="btn-lg btn-dark btn-block" href="/home" onClick={() => {register()}}> Sign up </Button>
+                        <Button className="btn-lg btn-dark btn-block" href="/" onClick={() => {register()}}> Sign up </Button>
                         <div className="login-links">
                             <a href="/">Sign in</a> 
                         </div>

@@ -11,7 +11,6 @@ const authMiddleware = require("../../middlewares/auth.middlewares");
 router.use(authMiddleware);
 
 router.get("/auth", menuController.teste);
-
 router.post("/addmetting", mettingControllers.addMetting);
 router.post("/removemetting", mettingControllers.removeMetting);
 

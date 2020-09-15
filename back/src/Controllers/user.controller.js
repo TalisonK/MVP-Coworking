@@ -78,7 +78,6 @@ const register = async (req, res) => {
 const UserEdit = async(req, res) => {
     try{
         const user = req.body;
-        console.log(req)
         for(let i in user ){
             if(i ==="password"){
                 user[i] = Cryptojs.AES.encrypt(user[i], process.env.KEY_ENCRYPTION);

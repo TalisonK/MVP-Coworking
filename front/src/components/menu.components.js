@@ -1,17 +1,14 @@
 const axios = require("axios");
 
-const url = "http://localhost:3030";
-
 export const confirmedmail = async() =>{
     let data = {
         email:localStorage.getItem("user")
     }
-    const response = await axios.post(url + "/email/confirmed", data, {
+    const response = await axios.post(localStorage.getItem("url") + "/email/confirmed", data, {
         headers: {
             'Content-Type': 'application/json'
         }
     })
-
     return ! await response.data.status;
 }
 
@@ -21,7 +18,7 @@ export const sendemail = async() => {
         email:localStorage.getItem("user")
     }
 
-    const response = await axios.post(url + "/email/resend", data, {
+    const response = await axios.post(localStorage.getItem("url") + "/email/resend", data, {
         headers: {
             'Content-Type': 'application/json'
         }
@@ -40,9 +37,10 @@ export const authenticate = async() => {
     }
 
 
-    const response = await axios.post(url + "/email/authenticate", data, {
+    const response = await axios.post(localStorage.getItem("url") + "/email/authenticate", data, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'authorization': "Bearer " + localStorage.getItem("token")
         }
     })
 }

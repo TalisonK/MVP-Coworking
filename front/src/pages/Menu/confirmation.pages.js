@@ -88,7 +88,7 @@ export const Confirmation = (props) => {
             <Label for="nameinput">Um email com a chave de autenticação foi enviado para seu email.</Label><br/>
 
 
-            <Button className="editbutton" onClick={authenticate}>Confirmar</Button>
+            <Button className="editbutton" href="/home" onClick={authenticate}>Confirmar</Button>
             </Form>
 	  </div>
     </div>

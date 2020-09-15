@@ -1,11 +1,6 @@
 import axios from 'axios';
 import validator from 'validator';
 
-const url = "http://localhost:3030"
-
-
-//auxiliar method
-
 const authenticate = (email, password) => {
 	// console.log(validator.isEmail(email))
 	// console.log(validator.isAlphanumeric(password))
@@ -23,7 +18,7 @@ export const login = async() => {
 				email:email,
 				password:password
 			}			
-			const response = await axios.post(url + "/login", data, {
+			const response = await axios.post(localStorage.getItem("url") + "/login", data, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -52,7 +47,7 @@ export async function register(){
 				email:email,
 				password:password
 			}
-			const response = await axios.post(url + "/register", data, {
+			const response = await axios.post(localStorage.getItem("url") + "/register", data, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -75,11 +70,11 @@ export async function register(){
 export const editUser = async(props) => {
 	console.log(props)
 	if(props.email){
-		const response = await axios.post(url + "/edituser", props, {
+		const response = await axios.post(localStorage.getItem("url") + "/edituser", props, {
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		}) 
-		return await response;
+		return response;
 	}
 }

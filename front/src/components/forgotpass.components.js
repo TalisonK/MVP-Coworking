@@ -1,9 +1,5 @@
 import axios from 'axios';
-
 import { resendEmail } from "../services/email.services";
-
-const url = "http://localhost:3030"
-
 
 export const alertcolor = (state, mes) => {
     const alert = document.getElementById("db");
@@ -40,14 +36,12 @@ export const validating = async() => {
     const alert = document.getElementById("db");
     const token = document.getElementById("validateinput").value;
     const email = localStorage.getItem("email");
-    console.log(token)
-    console.log(email);
     let data = {
         email:email,
         token:token
     }
 
-    const response = await axios.post(url + "/email/validation", data, {
+    const response = await axios.post(localStorage.getItem("url") + "/email/validation", data, {
         headers: {
             'Content-Type': 'application/json'
         }
@@ -91,7 +85,7 @@ export const change = async() => {
         email:email,
         password:pass
     }
-    const response = await axios.post(url + "/edituser", data, {
+    const response = await axios.post(localStorage.getItem("url") + "/edituser", data, {
         headers: {
             'Content-Type': 'application/json'
         }
